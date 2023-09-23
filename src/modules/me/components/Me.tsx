@@ -1,7 +1,7 @@
-import SocialMedia from '@/common/components/elements/SocialMedia';
-import { SOCIAL_MEDIA } from '@/common/constant/menu';
+import SocialMedia from "@/common/components/elements/SocialMedia";
+import { SOCIAL_MEDIA } from "@/common/constant/menu";
 
-import { MeProfile } from './MeProfile';
+import { MeProfile } from "./MeProfile";
 
 interface IProps {
   data: any;

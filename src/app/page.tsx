@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
-import { env } from '@/lib/env';
+import { env } from "@/lib/env";
 
-import { METADATA } from '@/common/constant/metadata';
+import { METADATA } from "@/common/constant/metadata";
 
-import Home from '@/modules/home';
+import Home from "@/modules/home";
 
 export const metadata: Metadata = {
   title: `${METADATA.creator} | Personal Website`,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <div data-aos="fade-up">
+      <div data-aos='fade-up'>
         <Home />
       </div>
     </>

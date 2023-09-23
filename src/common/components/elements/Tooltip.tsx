@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ReactNode, useState } from 'react';
+import { motion } from "framer-motion";
+import { ReactNode, useState } from "react";
 
 interface TooltipProps {
   title: string;
@@ -25,16 +25,16 @@ const Tooltip = ({ title, children }: TooltipProps) => {
   };
 
   return (
-    <div className="relative inline-block">
-      <div className="tooltip-container relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className='relative inline-block'>
+      <div className='tooltip-container relative' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {children}
       </div>
       {isTooltipVisible && (
         <motion.div
-          className="hidden lg:block bottom-full mb-2 bg-neutral-500 dark:bg-neutral-100 dark:text-neutral-700 text-neutral-100 text-xs font-medium rounded px-2 py-1 absolute w-max max-w-xs"
+          className='hidden lg:block bottom-full mb-2 bg-neutral-500 dark:bg-neutral-100 dark:text-neutral-700 text-neutral-100 text-xs font-medium rounded px-2 py-1 absolute w-max max-w-xs'
           variants={tooltipVariants}
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
         >
           {title}
         </motion.div>
