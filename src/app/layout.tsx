@@ -8,10 +8,12 @@ import Layouts from "@/common/components/layouts";
 import { METADATA } from "@/common/constant/metadata";
 
 import "./globals.css";
+import { env } from "@/lib/env";
 
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(METADATA.authors.url),
   description: METADATA.description,
   keywords: METADATA.keyword,
   creator: METADATA.creator,

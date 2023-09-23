@@ -16,11 +16,11 @@ export default function Introduction() {
           </li>
         </ul>
         <p className="leading-[1.8] md:leading-loose text-neutral-800">
-          Passionate and seasoned Software Engineer with a strong focus on
-          frontend development. Proficient in TypeScript and well-versed in all
-          aspects of web technologies. Collaborative team player dedicated to
-          delivering efficient, scalable, and visually appealing web
-          applications.
+          Frontend Development enthusiast and highly experienced software
+          engineer. Using NextJS and TypeScript as the technology, I am
+          currently a Frontend Engineer. Collaboration-focused team members are
+          dedicated to creating online apps that are useful, scalable, and
+          aesthetically beautiful.
         </p>
       </div>
     </section>

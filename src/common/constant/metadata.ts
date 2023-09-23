@@ -3,7 +3,7 @@ import { env } from "@/lib/env";
 export const METADATA = {
   creator: "Prastowo Adi",
   description:
-    "Passionate and seasoned Software Engineer with a strong focus on frontend development. Proficient in TypeScript and well-versed in all aspects of web technologies. Collaborative team player dedicated to delivering efficient, scalable, and visually appealing web applications.",
+    "Frontend development enthusiast and highly experienced software engineer. Using NextJS and TypeScript as the technology, I am currently a Frontend Engineer. Collaboration-focused team members are dedicated to creating online apps that are useful, scalable, and aesthetically beautiful.",
   keyword:
     "prastowoadi, prastowo adi, programming, nextjs, frontend developer, react, software engineer",
   authors: {

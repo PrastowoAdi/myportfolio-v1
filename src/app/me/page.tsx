@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { env } from "@/lib/env";
 import MeSection from "@/modules/me";
+import { METADATA } from "@/common/constant/metadata";
 
 const getDetailAboutMe = cache(async (id: string) => {
   const detailAboutMe = await prisma.me.findUnique({ where: { id } });
@@ -17,9 +18,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: `${aboutMe.name} | Personal Website`,
-    description: aboutMe.role,
+    description: METADATA.description,
     openGraph: {
-      images: [{ url: aboutMe.image }],
+      images: [{ url: METADATA.openGraph.img }],
     },
     keywords:
       "frontend developer, software engineer, react js, javascript, typescript, nextjs, web portfolio",
