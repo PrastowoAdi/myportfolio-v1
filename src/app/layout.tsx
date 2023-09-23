@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import { Sora } from "next/font/google";
+import type { Metadata } from 'next';
+import { Sora } from 'next/font/google';
 
-import GoogleAnalytics from "@bradgarropy/next-google-analytics";
+import GoogleAnalytics from '@bradgarropy/next-google-analytics';
+import { Analytics } from '@vercel/analytics/react';
 
-import Layouts from "@/common/components/layouts";
-import { METADATA } from "@/common/constant/metadata";
+import Layouts from '@/common/components/layouts';
+import { METADATA } from '@/common/constant/metadata';
 
-import "./globals.css";
+import './globals.css';
 
-const sora = Sora({ subsets: ["latin"] });
+const sora = Sora({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(METADATA.authors.url),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   creator: METADATA.creator,
   authors: {
     name: METADATA.creator,
-    url: METADATA.openGraph.url,
+    url: METADATA.openGraph.url
   },
   openGraph: {
     title: `${METADATA.creator} | Personal Website`,
@@ -27,21 +27,17 @@ export const metadata: Metadata = {
     url: METADATA.openGraph.url,
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,
-    type: "website",
-  },
+    type: 'website'
+  }
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`${sora.className}`}>
         <Layouts>{children}</Layouts>
-        {process.env.NODE_ENV === "production" && <Analytics />}
-        <GoogleAnalytics measurementId={process.env.GTM_ID || ""} />
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <GoogleAnalytics measurementId={process.env.GTM_ID || ''} />
       </body>
     </html>
   );

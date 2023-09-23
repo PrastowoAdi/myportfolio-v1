@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import React, { ReactNode, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { ReactNode, useEffect } from 'react';
 
 interface LayoutsProps {
   children: ReactNode;
@@ -12,7 +12,7 @@ export default function Layouts({ children }: LayoutsProps) {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      delay: 50,
+      delay: 50
     });
   }, []);
 

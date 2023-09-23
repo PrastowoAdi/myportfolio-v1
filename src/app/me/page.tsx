@@ -1,11 +1,13 @@
-import React, { cache } from "react";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
-import { prisma } from "@/lib/db/prisma";
-import { env } from "@/lib/env";
-import MeSection from "@/modules/me";
-import { METADATA } from "@/common/constant/metadata";
+import { prisma } from '@/lib/db/prisma';
+import { env } from '@/lib/env';
+import React, { cache } from 'react';
+
+import { METADATA } from '@/common/constant/metadata';
+
+import MeSection from '@/modules/me';
 
 const getDetailAboutMe = cache(async (id: string) => {
   const detailAboutMe = await prisma.me.findUnique({ where: { id } });
@@ -20,13 +22,12 @@ export async function generateMetadata(): Promise<Metadata> {
     title: `${aboutMe.name} | Personal Website`,
     description: METADATA.description,
     openGraph: {
-      images: [{ url: METADATA.openGraph.img }],
+      images: [{ url: METADATA.openGraph.img }]
     },
-    keywords:
-      "frontend developer, software engineer, react js, javascript, typescript, nextjs, web portfolio",
+    keywords: 'frontend developer, software engineer, react js, javascript, typescript, nextjs, web portfolio',
     alternates: {
-      canonical: `${env.DOMAIN}/me`,
-    },
+      canonical: `${env.DOMAIN}/me`
+    }
   };
 }
 

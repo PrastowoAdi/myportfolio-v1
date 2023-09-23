@@ -1,13 +1,16 @@
-import { METADATA } from "@/common/constant/metadata";
-import { env } from "@/lib/env";
-import Home from "@/modules/home";
-import { Metadata } from "next";
+import { Metadata } from 'next';
+
+import { env } from '@/lib/env';
+
+import { METADATA } from '@/common/constant/metadata';
+
+import Home from '@/modules/home';
 
 export const metadata: Metadata = {
   title: `${METADATA.creator} | Personal Website`,
   alternates: {
-    canonical: env.DOMAIN,
-  },
+    canonical: env.DOMAIN
+  }
 };
 
 export default function HomePage() {

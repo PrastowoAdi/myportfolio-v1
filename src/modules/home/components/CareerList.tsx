@@ -1,16 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { HiOutlineBriefcase as CareerIcon } from "react-icons/hi";
-import { LuDownload as DownloadIcon } from "react-icons/lu";
+import { HiOutlineBriefcase as CareerIcon } from 'react-icons/hi';
+import { LuDownload as DownloadIcon } from 'react-icons/lu';
 
-import SectionHeading from "@/common/components/elements/SectionHeading";
-import SectionSubHeading from "@/common/components/elements/SectionSubHeading";
-import { CAREERS } from "@/common/constant/careers";
+import SectionHeading from '@/common/components/elements/SectionHeading';
+import SectionSubHeading from '@/common/components/elements/SectionSubHeading';
+import { CAREERS } from '@/common/constant/careers';
 
-import CareerCard from "./CareerCard";
+import CareerCard from './CareerCard';
 
-const RESUME_URL =
-  "https://drive.google.com/file/d/1_r3e7bTmSrhV6Iwerr9WmeYhH9lBOnRL/view?usp=sharing";
+const RESUME_URL = 'https://drive.google.com/file/d/1_r3e7bTmSrhV6Iwerr9WmeYhH9lBOnRL/view?usp=sharing';
 
 export default function CareerList() {
   return (
@@ -33,9 +32,7 @@ export default function CareerList() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
-        {CAREERS?.map((career, index) => (
-          <CareerCard key={index} {...career} />
-        ))}
+        {CAREERS?.map((career, index) => <CareerCard key={index} {...career} />)}
       </div>
     </section>
   );

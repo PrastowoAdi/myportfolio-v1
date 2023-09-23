@@ -1,22 +1,15 @@
-import Image from "@/common/components/elements/Image";
-import { PROFILE_URL } from "@/common/constant";
+import Image from '@/common/components/elements/Image';
+import { PROFILE_URL } from '@/common/constant';
 
 export default function Introduction() {
   return (
     <section className="bg-cover bg-no-repeat space-y-2">
       <div className="flex flex-row items-center gap-5 mb-7">
-        <Image
-          src={PROFILE_URL}
-          alt="profile"
-          width={80}
-          height={80}
-          rounded="rounded-full"
-        />
+        <Image src={PROFILE_URL} alt="profile" width={80} height={80} rounded="rounded-full" />
         <div className="space-y-3">
           <div className="flex">
             <div className="flex gap-2 text-xl lg:text-3xl font-medium font-sora">
-              <h1>Hi, I&apos;m Prastowo Adi</h1>{" "}
-              <div className="ml-1 animate-waving-hand">👋</div>
+              <h1>Hi, I&apos;m Prastowo Adi</h1> <div className="ml-1 animate-waving-hand">👋</div>
             </div>
           </div>
 
@@ -31,11 +24,9 @@ export default function Introduction() {
         </div>
       </div>
       <p className="leading-[1.8] md:leading-loose text-neutral-800">
-        Frontend Development enthusiast and highly experienced software
-        engineer. Using NextJS and TypeScript as the technology, I am currently
-        a Frontend Engineer. Collaboration-focused team members are dedicated to
-        creating online apps that are useful, scalable, and aesthetically
-        beautiful.
+        Frontend Development enthusiast and highly experienced software engineer. Using NextJS and TypeScript as the
+        technology, I am currently a Frontend Engineer. Collaboration-focused team members are dedicated to creating
+        online apps that are useful, scalable, and aesthetically beautiful.
       </p>
     </section>
   );

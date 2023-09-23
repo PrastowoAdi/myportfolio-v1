@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import clsxm from "@/common/libs/clsxm";
-import { MenuItemProps } from "@/common/types/menu";
+import clsxm from '@/common/libs/clsxm';
+import { MenuItemProps } from '@/common/types/menu';
 
-import Tooltip from "./Tooltip";
+import Tooltip from './Tooltip';
 
 type SocialMediaProps = {
   items: MenuItemProps[];
@@ -11,24 +11,11 @@ type SocialMediaProps = {
 };
 
 export default function SocialMedia({ items, isMePage }: SocialMediaProps) {
-  const dataAos = isMePage ? "zoom-in-down" : "";
+  const dataAos = isMePage ? 'zoom-in-down' : '';
   return (
-    <div
-      data-aos={dataAos}
-      className={clsxm(
-        "flex flex-col space-y-1",
-        isMePage && "items-center mt-6"
-      )}
-    >
-      <div className="text-sm ml-2 mt-1 mb-2 text-neutral-600 dark:text-neutral-500 font-sora">
-        Let`s Connect
-      </div>
-      <div
-        className={clsxm(
-          "flex justify-around space-x-1 lg:justify-between px-5 pt-2",
-          isMePage && "space-x-8"
-        )}
-      >
+    <div data-aos={dataAos} className={clsxm('flex flex-col space-y-1', isMePage && 'items-center mt-6')}>
+      <div className="text-sm ml-2 mt-1 mb-2 text-neutral-600 dark:text-neutral-500 font-sora">Let`s Connect</div>
+      <div className={clsxm('flex justify-around space-x-1 lg:justify-between px-5 pt-2', isMePage && 'space-x-8')}>
         {items?.map((item: MenuItemProps, index: number) => (
           <Link
             key={index}

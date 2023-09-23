@@ -1,7 +1,8 @@
-import Breakline from "@/common/components/elements/Breakline";
-import CareerList from "./CareerList";
-import Introduction from "./Introduction";
-import SkillList from "./SkillList";
+import Breakline from '@/common/components/elements/Breakline';
+
+import CareerList from './CareerList';
+import Introduction from './Introduction';
+import SkillList from './SkillList';
 
 export default function Home() {
   return (
