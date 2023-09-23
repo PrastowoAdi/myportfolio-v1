@@ -21,12 +21,14 @@ export default function CareerCard({ position, company, logo, location, start_da
   }
 
   return (
-    <Card className="flex items-center gap-5 py-4 px-6 border border-neutral-300">
-      {logo ? <Image src={logo} width={55} height={55} alt={company} /> : <CompanyIcon size={30} />}
+    <Card className="flex items-center gap-5 py-4 px-6 border border-neutral-300 dark:border-neutral-800 dark:bg-neutral-800">
+      {logo ? <div className="bg-white p-2 rounded-md">
+      <Image src={logo} width={55} height={55} alt={company} />
+      </div> : <CompanyIcon size={30} />}
 
       <div className="space-y-1">
         <h2>{position}</h2>
-        <div className="text-sm text-neutral-600 space-y-2">
+        <div className="text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
           <div className="">
             <div className="flex items-center gap-1 md:gap-2">
               <a href={link || '#'} target="_blank" data-umami-event={`Click Career Company Name: ${company}`}>
@@ -40,7 +42,7 @@ export default function CareerCard({ position, company, logo, location, start_da
               <span>{format(startDate, 'MMM yyyy')}</span> -{' '}
               <span>{end_date ? format(endDate, 'MMM yyyy') : 'Present'}</span>
             </div>
-            <span className="text-neutral-500">~ {durationText}</span>
+            <span className="text-neutral-500 dark:text-neutral-500">~ {durationText}</span>
           </div>
         </div>
       </div>

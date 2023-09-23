@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Layouts from '@/common/components/layouts';
 import { METADATA } from '@/common/constant/metadata';
 
+import ThemeProviderContext from '../context/theme';
 import './globals.css';
 
 const sora = Sora({ subsets: ['latin'] });
@@ -35,7 +36,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`${sora.className}`}>
-        <Layouts>{children}</Layouts>
+        <ThemeProviderContext>
+          <Layouts>{children}</Layouts>
+        </ThemeProviderContext>
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
         <GoogleAnalytics measurementId={process.env.GTM_ID || ''} />
       </body>
