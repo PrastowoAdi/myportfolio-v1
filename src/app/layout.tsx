@@ -8,7 +8,6 @@ import Layouts from "@/common/components/layouts";
 import { METADATA } from "@/common/constant/metadata";
 
 import "./globals.css";
-import { env } from "@/lib/env";
 
 const sora = Sora({ subsets: ["latin"] });
 
