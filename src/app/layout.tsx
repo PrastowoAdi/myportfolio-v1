@@ -20,7 +20,9 @@ export const metadata: Metadata = {
     url: METADATA.openGraph.url,
   },
   openGraph: {
-    images: METADATA.profile,
+    title: `${METADATA.creator} | Personal Website`,
+    description: METADATA.description,
+    images: METADATA.openGraph.img,
     url: METADATA.openGraph.url,
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,
