@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import Container from "@/common/components/elements/Container";
 import PageHeading from "@/common/components/elements/PageHeading";
 import { METADATA } from "@/common/constant/metadata";
 
@@ -19,10 +20,10 @@ const PAGE_DESCRIPTION = "A short story of me";
 export default function HomePage() {
   return (
     <>
-      <div data-aos='fade-up'>
+      <Container data-aos='fade-up'>
         <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
         <About />
-      </div>
+      </Container>
     </>
   );
 }
