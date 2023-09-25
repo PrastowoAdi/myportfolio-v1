@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { env } from "@/lib/env";
 
+import Container from "@/common/components/elements/Container";
 import { METADATA } from "@/common/constant/metadata";
 
 import Home from "@/modules/home";
@@ -16,9 +17,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <div data-aos='fade-up'>
+      <Container data-aos='fade-up'>
         <Home />
-      </div>
+      </Container>
     </>
   );
 }
