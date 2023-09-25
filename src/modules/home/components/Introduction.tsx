@@ -6,7 +6,7 @@ export default function Introduction() {
     <section className='bg-cover bg-no-repeat space-y-2'>
       <div className='flex justify-between items-center gap-5 mb-5'>
         <div className='flex flex-row items-center gap-5'>
-          <div className='rounded-full p-2 border border-neutral-300'>
+          <div className='hidden md:block rounded-full p-2 border border-neutral-300'>
             <div className='overflow-hidden rounded-full'>
               <Image
                 src={PROFILE_URL}
