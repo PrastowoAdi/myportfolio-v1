@@ -35,6 +35,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning={true}>
+      <head>
+        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+      </head>
       <body className={`${sora.className}`}>
         <ThemeProviderContext>
           <Layouts>{children}</Layouts>

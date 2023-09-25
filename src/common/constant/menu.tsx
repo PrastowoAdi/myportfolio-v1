@@ -1,4 +1,11 @@
-import { BiAt as ThreadsIcon } from "react-icons/bi";
+import {
+  BiEnvelope as ContactIcon,
+  BiCategoryAlt as DashboardIcon,
+  BiHomeSmile as HomeIcon,
+  BiLeaf as ProfileIcon,
+  BiArchive as ProjectIcon,
+  BiAt as ThreadsIcon
+} from "react-icons/bi";
 import {
   BsDiscord as DiscordIcon,
   BsGithub as GithubIcon,
@@ -12,6 +19,48 @@ import {
 import { MenuItemProps } from "../types/menu";
 
 const iconSize = 20;
+export const MENU_ITEMS: MenuItemProps[] = [
+  {
+    title: "Home",
+    href: "/",
+    icon: <HomeIcon size={iconSize} />,
+    isShow: true,
+    isExternal: false,
+    eventName: "Pages: Home"
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+    icon: <ProjectIcon size={iconSize} />,
+    isShow: false,
+    isExternal: false,
+    eventName: "Pages: Projects"
+  },
+  {
+    title: "About",
+    href: "/about",
+    icon: <ProfileIcon size={iconSize} />,
+    isShow: true,
+    isExternal: false,
+    eventName: "Pages: About"
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    icon: <ContactIcon size={iconSize} />,
+    isShow: false,
+    isExternal: false,
+    eventName: "Pages: Contact"
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: <DashboardIcon size={iconSize} />,
+    isShow: false,
+    isExternal: false,
+    eventName: "Pages: Dashboard"
+  }
+];
 
 export const SOCIAL_MEDIA: MenuItemProps[] = [
   {
